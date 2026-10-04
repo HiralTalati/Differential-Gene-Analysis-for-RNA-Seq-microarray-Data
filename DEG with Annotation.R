@@ -116,7 +116,7 @@ run_comprehensive_pipeline <- function(gse_path = NA, dataset_id, group_col) {
   write.xlsx(final_light, file.path(out_dir, "03_DEG_Annotated_Light_Master.xlsx"))
   write.xlsx(final_full %>% filter(Significance != "Not Significant"), file.path(out_dir, "04_Significant_DEG.xlsx"))
   
-  # Wide Matrix for XGBoost
+  # Wide Matrix 
   write.xlsx(as.data.frame(expr_mat[best_probes, ]) %>% rownames_to_column("ProbeID") %>% 
                inner_join(map_tab, by="ProbeID") %>% dplyr::select(EntrezID, everything(), -ProbeID, -Symbol), 
              file.path(out_dir, "08_Expression_Matrix_Wide.xlsx"))
