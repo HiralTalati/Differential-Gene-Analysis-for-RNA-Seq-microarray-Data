@@ -49,16 +49,27 @@ Rscript master_pipeline_v21.R
 For every dataset processed, a separate results folder named {Dataset_ID}_Excel_Results/ is generated, containing the following validation plots and spreadsheets:
 text
 ├── GSE63060_Excel_Results/
+
 │   ├── 05_QC_Density.png               # Diagnostic sample curve distributions
+
 │   ├── 06_QC_UMAP.png                  # Unbiased spatial group clustering 
+
 │   ├── 01_Raw_DEG_Stats.xlsx           # Complete uncollapsed contrast matrices
+
 │   ├── 02_DEG_Annotated_Full_Master.xlsx# Long-format combined metadata (Expression + Stats)
+
 │   ├── 03_DEG_Annotated_Light_Master.xlsx# Condensed long-format layout for clean modeling
+
 │   ├── 04_Significant_DEG.xlsx         # Extracted boundaries (adj.p < 0.05 & |logFC| > 0.2)
+
 │   ├── 08_Expression_Matrix_Wide.xlsx  # Wide numerical frame tailored for ML / XGBoost input
+
 │   ├── 09_Volcano_CTL_vs_MCI.png       # Standard logFC vs Log10 p-value distributions
+
 │   ├── 09_Volcano_MCI_vs_AD.png
+
 │   └── 09_Volcano_CTL_vs_AD.png
+
 
 📄 License
 This analysis framework is open-source and distributed under the MIT License.
