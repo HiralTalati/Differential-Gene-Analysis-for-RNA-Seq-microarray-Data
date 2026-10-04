@@ -1,5 +1,5 @@
 #################################################################
-# MASTER PIPELINE V21: OPTIMIZED LONG-FORMAT & MULTI-EXPORT
+# MASTER PIPELINE: OPTIMIZED LONG-FORMAT & MULTI-EXPORT
 # Features: 
 # - Normalization Audit & QC (Density/UMAP)
 # - Global Unbiased DEG (p < 0.05, |logFC| > 0.2)
